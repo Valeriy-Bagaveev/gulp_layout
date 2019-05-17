@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Caption:400,700|PT+Sans:400,700&subset=cyrillic,cyrillic-ext,latin-ext');
+
+@font-face {
+  font-family: 'SanFranciscoTextRegular';
+  src: url('../fonts/SFUIText-Regular.eot');
+  src: url('../fonts/SFUIText-Regular.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/SFUIText-Regular.woff') format('woff'),
+  url('../fonts/SFUIText-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@mixin respond-to($media) {
+  @if $media == mobile {
+    @media all and (max-width: 479px) { @content; }
+  }
+  @else if $media == small-tablet {
+    @media all and (min-width: 480px) and (max-width: 767px) { @content; }
+  }
+  @else if $media == tablet {
+    @media all and (min-width: 768px) and (max-width: 1123px) { @content; }
+  }
+  @else if $media == big-tablet {
+    @media all and (min-width: 1124px) { @content; }
+  }
+}
+
+* {
+  outline: none;
+  vertical-align: baseline;
+  box-sizing: border-box !important;
+  border: 0 none;
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-overflow-scrolling: touch;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  appearance: none;
+  font-style: normal;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
